@@ -30,6 +30,12 @@
 
 */
 
+html {
+  /* font-size: 10px; */
+  /* default browser value 16px = 1rem */
+  /* porcentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,4 +47,15 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+img {
+  width: 100%;
 }

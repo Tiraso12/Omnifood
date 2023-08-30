@@ -53,13 +53,40 @@ body {
   color: #555;
 }
 
+/* ****************************************** */
+/* GENERAL COMPONENTS */
+/* ****************************************** */
+
+/* ****************************************** */
+/* HEADER */
+/* ****************************************** */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.6rem 0 4.6rem;
+  background-color: #fdf2e9;
+
+  /* because we want header to be sticky later */
+  height: 9.6rem;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/* ****************************************** */
+/* HERO SECTION */
+/* ****************************************** */
+
 .section-hero {
   background-color: #fdf2e9;
-  padding: 9.6rem 0;
+  padding: 4.8 0 9.6rem 0;
 }
 .hero {
   max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
@@ -127,10 +154,6 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
 .delivered-meals {
   display: flex;
   align-items: center;
@@ -162,4 +185,32 @@ body {
 .delivered-text span {
   color: #cf711f;
   font-weight: 700;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+/* ****************************************** */
+/* NAVIGATION*/
+/* ****************************************** */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
 }

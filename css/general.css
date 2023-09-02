@@ -59,6 +59,7 @@ html {
   /* default browser value 16px = 1rem */
   /* porcentage of user's browser font-size setting */
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -71,6 +72,10 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /*this only works if there is nothing absolutely
+  positioned in relation to body */
+  overflow-x: hidden;
 }
 .container {
   /* 1140px */

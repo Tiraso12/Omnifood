@@ -33,13 +33,44 @@ allLinks.forEach(function (link) {
       behavior: 'smooth'
     });
 
+    //scroll to other links
+
     if (href !== '#' && href.startsWith('#')) {
 
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: 'smooth' })
+
     }
+
+    //close mobile navigation
+
+    if (link.classList.contains('main-nav-link'))
+      headerEl.classList.toggle('nav-open');
   })
 })
+
+///////////////////////////////////////////////////////////
+// Adding the sticky class when hero is out of the viewport
+const sectionHeroEl = document.querySelector('.section-hero');
+const obs = new IntersectionObserver(function (entries) {
+  const ent = entries[0];
+  console.log(ent);
+
+  if (!ent.isIntersecting === false) {
+    document.body.classList.add("sticky");
+  }
+
+  if (ent.isIntersecting) {
+    document.body.classList.remove("sticky");
+  }
+},
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  });
+obs.observe(sectionHeroEl);
 
 
 ///////////////////////////////////////////////////////////
